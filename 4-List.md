@@ -84,8 +84,8 @@ Haskell 支持了无穷数组（Infinite List）。
 来返回一个从输入开始一直到无穷的函数
 
 ```hs
--- 位于 4-List/from.hs
--- ghci 4-List/from.hs 可以自动装载此程序
+-- 位于 src/4-from.hs
+-- ghci src/4-from.hs 可以自动装载此程序
 from :: Int -> [Int]
 from x = x : from (x + 1)
 ```
