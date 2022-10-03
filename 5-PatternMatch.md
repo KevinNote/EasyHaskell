@@ -1,5 +1,7 @@
 # 5. 模式匹配
 
+## Pattern Maching
+
 模式匹配的用处是：函数的参数有多种可能的形式，调用时自动找到匹配的形式并调用。
 
 举个最简单的例子，例如阶乘，即 `n!`，如果使用 Java 书写，则为
@@ -44,3 +46,28 @@ or' _     _ = True           -- _ 表示这个参数是弃元
 ```
 
 ~~简单来说就是，模式匹配就是你把所有情况写全了自动匹配，自动打表~~
+
+## Guard
+
+Guard 比较牛逼
+
+其结构类似于
+
+```hs
+func x | condition1 = return1
+       | condition2 = return2
+       | condition3 = return3
+       | ....
+       | otherwise  = returnN
+```
+
+以判断一个数是否为2的power为例
+
+```hs
+isPowerOfTwo :: Int -> Bool
+isPowerOfTwo x | x == 1 = True  -- 情况1：如果是 1，则为 2^0，所以是
+               | even x = isPowerOfTwo (x `div` 2) -- 情况2：如果是偶数则除2递归
+               | otherwise = False -- 情况3：如果不是1并且不能被2整除则一定不是2的power，返回 False
+```
+
+需要注意的是 Guard 的匹配也是顺序匹配的。
