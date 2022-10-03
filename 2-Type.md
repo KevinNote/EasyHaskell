@@ -74,3 +74,47 @@ ghci> :t True :: Int
     * Couldn't match expected type `Int' with actual type `Bool'
     * In the expression: True :: Int
 ```
+
+## 一些基础操作
+
+### 一个语法糖
+
+当你遇到
+
+```hs
+x `f` y
+```
+
+时请不要惊慌，其是 `f x y` 的语法糖
+
+### 数字相关的操作
+
+```hs
+ghci> 1 + 3     -- 加法
+4
+ghci> 2 - 4     -- 减法
+-2
+ghci> 4 `div` 2 -- 除法
+2
+ghci> div 4 2   -- 除法
+2
+ghci> 2 * 3     -- 乘法
+6
+```
+
+### 布尔相关的操作
+
+```hs
+ghci> 1 == 1 -- 1 和 1是否相等？
+True
+ghci> 1 /= 1 -- 1 和 1 是否不等？
+False
+ghci> 3 > 2  -- 3 ＞ 2？
+True
+ghci> 2 >= 1 -- 2 ≥ 1？
+True
+ghci> 2 < 1  -- 2 ＜ 1？
+False
+ghci> 2 <= 2 -- 2 ≤ 2？
+True
+```
