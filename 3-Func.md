@@ -22,7 +22,7 @@ let addOne x = x + 1
 如
 
 ```hs
-addOne' x = x + 1
+addOne x = x + 1
 ```
 
 ## 类型
@@ -31,8 +31,9 @@ addOne' x = x + 1
 正常来说我们需要在函数定义前定义其类型
 
 ```hs
-addOne' Int -> Int  -- 定义其类型为输入一个 Int 返回一个 Int
-addOne' x = x + 1   -- 函数定义
+-- 文件位于 src/3-addOne.hs
+addOne Int -> Int  -- 定义其类型为输入一个 Int 返回一个 Int
+addOne x = x + 1   -- 函数定义
 ```
 
 Haskell 的类型标注是非常特殊的，尤其是柯里化后的函数。参见后节。
@@ -54,7 +55,7 @@ int add(int x, int y, int z) {
 即我们输入 3 个 `Int` 类型的变量形成的元组，最后返回一个 Int。
 
 ```hs
--- 位于 src/3-curry.hs
+-- 文件位于 src/3-curry.hs
 addUnCurry :: (Int, Int, Int) -> Int
 addUnCurry (x, y, z) = x + y + z
 ```
@@ -65,6 +66,7 @@ addUnCurry (x, y, z) = x + y + z
 考虑如下函数：
 
 ```hs
+-- 文件位于 src/3-curry.hs
 addCurry :: Int -> Int -> Int -> Int
 addCurry x y z = x + y + z
 ```
@@ -72,6 +74,7 @@ addCurry x y z = x + y + z
 我们可以非常简单的实现为
 
 ```hs
+-- 文件位于 src/3-curry.hs
 addTwo :: Int -> Int -> Int
 addTwo = addCurry 0
 ```
