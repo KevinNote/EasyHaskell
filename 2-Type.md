@@ -12,7 +12,7 @@
 | Double  | double | 双精度浮点 |
 | Bool    | bool   | 布尔值，其只可以为 True 和 False（大小写敏感） |
 | Char    | char   | 字符 |
-| \[T\]   | T[]    | 数组、列表/List |
+| [T]     | T[]    | 数组、列表/List |
 | (T1, T2, T3) | (x, y, z) | 元组/Tuple |
 
 > Int 和 Integer 不同的点在于 Int 限制其长度，通常为64位
