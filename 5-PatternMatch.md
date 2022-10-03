@@ -84,3 +84,4 @@ len :: [a] -> Int
 len [] = 0                 -- 匹配空列表
 len (x : xs) = 1 + len xs  -- [a] equiv. a1 : (a2 : ... (an : []))
 ```
+

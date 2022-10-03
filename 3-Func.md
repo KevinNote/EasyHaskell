@@ -82,3 +82,4 @@ addTwo = addCurry 0
 柯里化的核心思路可以理解为：在 `addCurry` 传入第一个参数 `x` 时，
 其消去了其类型 `Int -> Int -> Int -> Int` 中的第一个 `Int`，
 返回了一个类型为 `Int -> Int -> Int` 的函数。
+
