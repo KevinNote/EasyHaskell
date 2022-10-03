@@ -73,6 +73,18 @@ ghci> tail y
 *** Exception: Prelude.head: empty list
 ```
 
+## 获取第 n 个元素（`[a] !! Int`）
+
+类型 `[a] -> Int -> a`
+
+```hs
+ghci> let x = [1, 2, 3]
+ghci> x !! 2 -- 获取索引为2的，即x[2]
+3
+ghci> x !! 99 -- Out of Index
+*** Exception: Prelude.!!: index too large
+```
+
 ## 惰性求值/Lazy Evaluation
 
 Haskell 是一门非常🐂的语言，其支持数组的惰性求值。简单来说，
